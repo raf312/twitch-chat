@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap);
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; overflow: hidden; }
+body::before {  content: "";  position: fixed;  top: -10px;  left: 0;  width: 100%;  height: 10px;  box-shadow: 0px 0 10px 20px rgba(0, 0, 0, 0.7);  z-index: 100; }
+body { background: transparent !important; line-height: 1.5em; color: #fff; }
+
+#log>div { position: relative; padding-top: 21px; margin-bottom: 10px; }
+
+/*  Na linha abaixo você pode trocar o tipo de animação do chat.
+    Nesse site você encontra tipos de animações: https://animate.style/
+    Basta trocar "fadeInUp" por outra animação. */
+#log>div { animation: fadeInUp .3s ease forwards, fadeOut 0.5s ease 0 forwards;
+  -webkit-animation: fadeInUp .3s ease forwards, fadeOut 0.5s ease 0 forwards; }
+
+.colon { display: none; }
+
+#log { position: absolute; width: 100%; bottom: 0; left: 0; padding: 0 10px 10px; }
+#log>div.deleted { visibility: hidden; }
+
+/* ===== NAME ===== */
+#log .meta {
+    position: absolute;
+    top: 0px;
+    left: 10px; 
+    padding: 6px 15px;
+    line-height: 15px; 
+    border-radius: 4px;
+    font-family: 'Ubuntu'; 
+  	font-size: 22px;
+    z-index: 1;
+}
+
+#log .meta .badges {
+    float: left; 
+    margin-right: 10px;
+}
+
+#log .meta .badges > img { 
+    width: 18px; 
+    height: 18px; 
+    margin-right: 5px;
+}
+
+#log .meta .badges > img:last-child {
+    margin-right: 0;
+}
+
+#log .meta .name {
+    float: left; line-height: 21px;
+}
+
+/* ===== MESSAGE ===== */
+#log .message { position: relative; min-height: 20px; }
+
+#log .message .container-message {
+		background-color: rgba(255, 255, 255, 0.712);
+  	color: black;
+    padding: 20px 18px 15px 18px; 
+    border: 2px solid #a970ff;
+    border-radius: 0 10px 10px 10px; 
+    display: inline-block;
+    font-family: 'Ubuntu'; 
+    font-size: 24px; 
+    word-break: break-word;
+}
+
+#log .message .container-message .emote {
+    background-image: none !important;
+}
+
+#log .message .container-message .emote img {
+    max-width: 25px;
+}
